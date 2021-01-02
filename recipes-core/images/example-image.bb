@@ -24,7 +24,7 @@ IMAGE_FEATURES_remove = "splash"
 
 # print the message once do_rootfs() has completed
 do_rootfs_append() {
-    bb.warn("An image has been freshly builti!")
+    bb.warn("An image has been freshly built!")
 }
 
 # Install ssh server
@@ -39,5 +39,15 @@ IMAGE_INSTALL += " tzdata tzdata-asia"
 # install networkmanager
 IMAGE_INSTALL += " networkmanager networkmanager-nmtui networkmanager-bash-completion"
 
-# install hello world cpp app
+# install hello world cpp app from source
 IMAGE_INSTALL += " hello-world-cpp-sources "
+
+# install hello world cpp app from makefile
+IMAGE_INSTALL += " hello-world-cpp-makefile "
+
+# install python flask hello world
+IMAGE_INSTALL += " python-flask-hello-world "
+
+# install the cmake hellow world example
+IMAGE_INSTALL += " cmake-hello-world "
+
